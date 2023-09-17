@@ -26,7 +26,6 @@ Also, some functions such has `get_numbers_from_end()` (which gets the number fr
 3. Lastly, it arranges the solved values for x_matrix in a dictionary format, and returns the (voltage at node) and (current across independent voltage sources).
 
 ## References
-1. Extensive help was taken from [chatGPT](https://chat.openai.com) for string operations (mostly slicing, removing, sorting etc) because of time constraints (I started on the last day), learning about new for me, but actually common inbuilt python functions (like sort(), split(), strip()), and for debugging a particular piece of code.
-2. A big thanks to Pradeep (ee22b055), my roommate, for explaining me the basic working of MNA, and also for helping me debug the code in the last moment. We coded continuously for 18 hours from 6pm 16 Sept. IST till 12pm 17 Sept. IST. Our approach was similar and the final code also looked very similar, even though we did not directly copy from each other.
-3. Some references I used to learn MNA properly: [nptel vid](https://www.youtube.com/watch?v=BQKVCrJfp9E) [swarthmore article on basic MNA](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA2.html)
-
+1. Extensive help was taken from [chatGPT](https://chat.openai.com) for string operations (mostly slicing, removing, sorting etc) because of time constraints (I started on the last day), learning about new, for me, but actually common inbuilt python functions (like sort(), split(), strip()), and for debugging particular pieces of code.
+2. A big thanks to Pradeep (ee22b055), my roommate, for explaining me the basic working of MNA, and also for helping me debug the code in the last moment. We coded continuously for 18 hours from 6pm 16 Sept. IST till 12pm 17 Sept. IST, and we couldn't have gone through that without each other's company. Just to be clear, our approach was similar and the final code also looked very similar, even though we did not directly copy from each other.
+3. Some references I used to learn MNA properly: [nptel video](https://www.youtube.com/watch?v=BQKVCrJfp9E), [swarthmore article on basic MNA](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA2.html)

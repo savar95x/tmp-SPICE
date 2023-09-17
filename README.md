@@ -1,9 +1,9 @@
 # SPICE simulation in Python
 
-This is [my](https://github.com/savar95x/) (ee22b142, savar's) submission for the Simulation Program with Integrated Circuit Emphasis in Python, Assignment 2.
+This is a documentation sort-of for [my](https://github.com/savar95x/) (ee22b142, savar's) submission for the Simulation Program with Integrated Circuit Emphasis in Python, Assignment 2.
 
 ## Blueprint
-I have implemented SPICE using <b>M</b>odified <b>N</b>odal <b>A</b>nalysis (MNA)<br>
+I have implemented SPICE using the <b>M</b>odified <b>N</b>odal <b>A</b>nalysis (MNA)<br>
 The way I went around it is making a matrix equation `AX=B`, and then solving for the X vector (using numpy).
 The A matrix is the combination of conductance(G), and node voltage(B) matrices in this fashion:<br>
 (Let's say the (num of nodes) = 3 and (num of independent voltage sources) = 2)
@@ -16,7 +16,27 @@ The A matrix is the combination of conductance(G), and node voltage(B) matrices 
         [      |    ]                    
 
 where:<br>
-G is a square matrix of order (number of nodes). B is of order (number of nodes)x(number of independent voltage sources), C is the transpose of B, and D remains empty (it deals with dependent sources, which we have been asked to ignore in this assginment)
+G is a square matrix of order (number of nodes). B is of order (number of nodes)x(number of independent voltage sources), C is the transpose of B, and D remains empty (it deals with dependent sources, which we have been asked to ignore in this assginment)<br><br>
+B matrix is a vertical matrix, with the values of independent sources and voltage sources in this fashion:<br>
+
+        [ x1 ]
+        [ x2 ]
+    B = [ x3 ]
+        [ y1 ]
+        [ y2 ]
+
+where:<br>
+xi is the sum of values of independent current sources entering(+) and leaving(-) the node i, and yi is the value of i'th independent voltage source.<br><br>
+X matrix is:<br>
+
+        [ x1 ]
+        [ x2 ]
+    X = [ x3 ]
+        [ y1 ]
+        [ y2 ]
+
+where:<br>
+xi is the voltage at i'th node. And yi is the current across the i'th independent voltage source.
 
 ## Code Explaination
 The `evalSpice()` function starts with
